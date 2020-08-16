@@ -79,12 +79,12 @@ function paintToDo(text){
     const movBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length + 1;
-    span.innerText = text;
+    
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteToDo);
     movBtn.innerText = "⏩";
     movBtn.addEventListener("click", moveToDo);
-    
+    span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(movBtn);
     li.appendChild(span);
@@ -105,12 +105,12 @@ function paintFinish(text) {
     const movBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = finishLists.length + 1;
-    span.innerText = text;
+    
     delBtn.innerText = "❌";
     delBtn.addEventListener("click", deleteFinish);
     movBtn.innerText = "⏩";
     movBtn.addEventListener("click", moveFinish);
-    
+    span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(movBtn);
     li.appendChild(span);
@@ -127,7 +127,7 @@ function paintFinish(text) {
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = toDoInput.value;
-    toDoInput.value = ""
+    toDoInput.innerHTML=""
     paintToDo(currentValue)
 }
 
