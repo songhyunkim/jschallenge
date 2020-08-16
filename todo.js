@@ -75,9 +75,10 @@ function saveFinishs() {
   
 function paintToDo(text){
     const li = document.createElement("li");
+    const span = document.createElement("span");
     const delBtn = document.createElement("button");
     const movBtn = document.createElement("button");
-    const span = document.createElement("span");
+    
     const newId = toDos.length + 1;
     
     delBtn.innerText = "❌";
@@ -101,9 +102,10 @@ function paintToDo(text){
 
 function paintFinish(text) {
     const li = document.createElement("li");
+    const span = document.createElement("span");
     const delBtn = document.createElement("button");
     const movBtn = document.createElement("button");
-    const span = document.createElement("span");
+    
     const newId = finishLists.length + 1;
     
     delBtn.innerText = "❌";
